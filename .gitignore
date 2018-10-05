@@ -27,6 +27,8 @@ gradle/
 /build/
 !gradle/wrapper/gradle-wrapper.jar
 
+.mvn/
+
 ### STS ###
 .apt_generated
 .classpath
