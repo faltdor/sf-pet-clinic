@@ -7,8 +7,6 @@ import com.faltdor.petclinic.model.Owner;
 import com.faltdor.petclinic.model.Vet;
 import com.faltdor.petclinic.services.OwnerService;
 import com.faltdor.petclinic.services.VetService;
-import com.faltdor.petclinic.services.map.OwnerServiceMap;
-import com.faltdor.petclinic.services.map.VetServiceMap;
 
 @Component
 public class DataLoader implements CommandLineRunner {
@@ -16,9 +14,9 @@ public class DataLoader implements CommandLineRunner {
 	private final OwnerService ownerService;
 	private final VetService vetService;
 
-	public DataLoader() {
-		ownerService = new OwnerServiceMap();
-		vetService = new VetServiceMap();
+	public DataLoader(OwnerService ownerService, VetService vetService) {
+		this.ownerService = ownerService;
+		this.vetService = vetService;
 	}
 
 	@Override

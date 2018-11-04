@@ -1,11 +1,13 @@
 package com.faltdor.petclinic.services.map;
 
-import com.faltdor.petclinic.model.Owner;
-import com.faltdor.petclinic.services.CrudService;
-import com.faltdor.petclinic.services.OwnerService;
-
 import java.util.Set;
 
+import org.springframework.stereotype.Service;
+
+import com.faltdor.petclinic.model.Owner;
+import com.faltdor.petclinic.services.OwnerService;
+
+@Service
 public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService {
 
     @Override

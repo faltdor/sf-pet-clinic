@@ -5,6 +5,8 @@ package com.faltdor.petclinic.services.map;
 
 import java.util.Set;
 
+import org.springframework.stereotype.Service;
+
 import com.faltdor.petclinic.model.Pet;
 import com.faltdor.petclinic.services.PetService;
 
@@ -12,6 +14,7 @@ import com.faltdor.petclinic.services.PetService;
  * @author
  *
  */
+@Service
 public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService{
 
     @Override
