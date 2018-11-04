@@ -1,4 +1,4 @@
-package com.faltdor.petclinic.controllersº;
+package com.faltdor.petclinic.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
