@@ -5,6 +5,23 @@
 <title>List of Vets</title>
 </head>
 <body>
-	<h1 th:text="'List of Vets'"></h1>
+<!--/*@thymesVar id="vet" type="com.faltdor.petclinic.model.Vet"*/-->
+	<h1 th:text="'List of Vets'">List of Vets</h1>
+	<table>
+		<thead>
+			<tr>
+				<th>id</th>
+				<th>First Name</th>
+				<th>Last Name</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="vet : ${vets}">
+				<td th:text="${vet.id}">fake Id</td>
+				<td th:text="${vet.firstName}">fake Name</td>
+				<td th:text="${vet.lastName}">fake Last Name</td>
+			</tr>
+		</tbody>
+	</table>
 </body>
 </html>
