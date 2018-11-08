@@ -1,0 +1,35 @@
+version: 0.2
+
+#env:
+  #variables:
+     # key: "value"
+     # key: "value"
+  #parameter-store:
+     # key: "value"
+     # key: "value"
+
+phases:
+  #install:
+    #commands:
+      # - command
+      # - command
+  #pre_build:
+    #commands:
+      # - command
+      # - command
+  build:
+    commands:
+      - echo Build started on `date`
+      - mvn test
+  post_build:
+      - echo Build completed on `date`
+      - mvn package
+artifacts:
+  files:
+    - pet-clinic-web/target/pet-clinic-web-0.0.5-SNAPSHOT.jar
+  #name: $(date +%Y-%m-%d)
+  #discard-paths: yes
+  #base-directory: location
+#cache:
+  #paths:
+    # - paths
