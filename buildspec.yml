@@ -1,12 +1,21 @@
 version: 0.2
+
 phases:
+  install:
+    commands:
+      - pip install --upgrade awscli
+  pre_build:
+    commands:
+      - mvn clean compile test
   build:
     commands:
-      - echo Build started on `date`
-      - mvn test
+      - mvn war:exploded
   post_build:
-      - echo Build completed on `date`
-      - mvn package
+    commands:
+      - cp -r .ebextensions/ target/ROOT/
+      - cp -r pet-clinic-web/target/pet-clinic-web-0.0.5-SNAPSHOT.jar/ target/
+      - aws cloudformation package --template template.yml --s3-bucket $S3_BUCKET --output-template-file template-export.yml
 artifacts:
+  type: zip
   files:
-    - pet-clinic-web/target/pet-clinic-web-0.0.5-SNAPSHOT.jar
+    - template-export.yml
