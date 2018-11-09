@@ -1,2 +1,4 @@
 # sf-pet-clinic
 Spring Framework Pet Clinic
+
+![Build Status](https://codebuild.us-west-2.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoiNjB3ZDlKK1JDMVFWcGgwNEJxM2d0WGxOdUpqMHdKeE5lcHF1TnZZTzVBbi9mV21LL0NFTy9NaWs2OU9VQlpEYzVNalZaUm1lWUpkWGF4bk5ORk8rcjRrPSIsIml2UGFyYW1ldGVyU3BlYyI6Ik1sUWlFVzdlWmxHaXBpWE4iLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&branch=master)
