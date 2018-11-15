@@ -22,7 +22,7 @@ public class DataLoader implements CommandLineRunner {
 		this.vetService = vetService;
 		this.petTypeService = petTypeService;
 	}
-
+ 
 	@Override
 	public void run(String... args) throws Exception {
 		PetType petType = new PetType();
