@@ -89,4 +89,3 @@ Resources:
           OptionName: Subnets
           Value: !Ref 'SubnetId'
         - !Ref "AWS::NoValue"
-
