@@ -12,7 +12,7 @@ phases:
       - mvn install
   post_build:
     commands:
-      - cp -r .ebextensions/ target/ROOT/
+      - cp -r .ebextensions/ pet-clinic-web/target/ROOT/
       - aws cloudformation package --template template.yml --s3-bucket $S3_BUCKET --output-template-file template-export.yml
 artifacts:
   type: zip
