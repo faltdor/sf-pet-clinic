@@ -9,10 +9,11 @@ phases:
       - mvn clean compile test
   build:
     commands:
-      - mvn install
+      - mvn clean install
   post_build:
     commands:
       - mkdir target
+      - mkdir target/ROOT/
       - cp -r .ebextensions/ target/ROOT/
       - cp -r pet-clinic-web/target/pet-clinic-web-0.0.5-SNAPSHOT.jar target/ROOT/
       - cp -r pet-clinic-web/target/pet-clinic-web-0.0.5-SNAPSHOT.jar target/
